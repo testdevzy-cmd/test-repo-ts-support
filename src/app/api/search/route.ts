@@ -6,6 +6,13 @@ const users = [
   { id: 2, name: "Jane Smith", email: "jane@example.com" },
 ];
 
+/**
+ * Search endpoint for querying users
+ * @param request - NextRequest with query parameters
+ * @param request.query.q - Search query string
+ * @param request.query.limit - Maximum number of results to return
+ * @returns JSON response with search results
+ */
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get("q");
