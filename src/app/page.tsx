@@ -1,4 +1,8 @@
+import { isDevelopment } from "@/utils/env";
+
 export default function Home() {
+  const isDev = isDevelopment();
+
   return (
     <main className="container">
       <div className="hero">
@@ -24,6 +28,7 @@ export default function Home() {
         <div className="status">
           <span className="status-indicator"></span>
           System operational
+          {isDev && <span className="env-badge"> • Dev Mode</span>}
         </div>
       </div>
       <footer className="footer">
