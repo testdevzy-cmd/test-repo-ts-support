@@ -68,6 +68,30 @@ Returns the current health status of the application.
 }
 ```
 
+### App Info
+
+```
+GET /api/info
+```
+
+Returns basic information about the application.
+
+**Response:**
+
+```json
+{
+  "name": "test-repo-ts-support",
+  "version": "0.1.0",
+  "framework": "Next.js 14",
+  "language": "TypeScript",
+  "description": "A Next.js TypeScript fullstack application for testing PR review workflows",
+  "endpoints": {
+    "health": "/api/health",
+    "info": "/api/info"
+  }
+}
+```
+
 ## Scripts
 
 | Script | Description |
