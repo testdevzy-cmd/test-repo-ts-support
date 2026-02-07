@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
     <main className="container">
@@ -26,9 +28,7 @@ export default function Home() {
           System operational
         </div>
       </div>
-      <footer className="footer">
-        <p>Ready for development • Next.js 14 • TypeScript</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
