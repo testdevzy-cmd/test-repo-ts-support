@@ -20,6 +20,11 @@ export default function Home() {
             Health Check
             <span className="link-arrow">→</span>
           </a>
+          <a href="/api/search?q=john" className="link" target="_blank" rel="noopener noreferrer">
+            <span className="link-icon">🔍</span>
+            Search API
+            <span className="link-arrow">→</span>
+          </a>
         </div>
         <div className="status">
           <span className="status-indicator"></span>
