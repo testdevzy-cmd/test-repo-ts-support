@@ -1,4 +1,8 @@
+import { getAppVersion } from "@/utils/version";
+
 export default function Home() {
+  const version = getAppVersion();
+
   return (
     <main className="container">
       <div className="hero">
@@ -7,9 +11,12 @@ export default function Home() {
           <span className="terminal-dot yellow"></span>
           <span className="terminal-dot green"></span>
         </div>
-        <h1 className="title">
-          <span className="accent">$</span> test-repo-ts-support
-        </h1>
+        <div className="title-section">
+          <h1 className="title">
+            <span className="accent">$</span> test-repo-ts-support
+          </h1>
+          <span className="version-badge">v{version}</span>
+        </div>
         <p className="description">
           A Next.js TypeScript fullstack application for testing PR review workflows.
           Built as a sandbox for developing and testing code review automation.
