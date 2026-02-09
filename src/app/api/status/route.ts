@@ -5,11 +5,18 @@ import { NextResponse } from "next/server";
  * Returns system status and uptime information
  */
 export async function GET() {
-  const startTime = process.uptime();
+  const uptimeSeconds = Math.floor(process.uptime());
+  const hours = Math.floor(uptimeSeconds / 3600);
+  const minutes = Math.floor((uptimeSeconds % 3600) / 60);
+  const seconds = uptimeSeconds % 60;
   
   return NextResponse.json({
     status: "operational",
-    uptime: Math.floor(startTime),
+    uptime: {
+      total: uptimeSeconds,
+      formatted: `${hours}h ${minutes}m ${seconds}s`,
+    },
+    environment: process.env.NODE_ENV || "unknown",
     timestamp: new Date().toISOString(),
   });
 }
