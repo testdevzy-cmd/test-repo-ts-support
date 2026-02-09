@@ -14,3 +14,11 @@ export const appConfig = {
 export function getAppName(): string {
   return appConfig.name;
 }
+
+/**
+ * Gets the application version
+ * @returns The application version
+ */
+export function getAppVersion(): string {
+  return appConfig.version;
+}
