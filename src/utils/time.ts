@@ -13,3 +13,11 @@ export function formatTimestamp(date: Date = new Date()): string {
     hour12: true,
   });
 }
+
+/**
+ * Gets the current timestamp in ISO format
+ * @returns ISO timestamp string
+ */
+export function getCurrentTimestamp(): string {
+  return new Date().toISOString();
+}
