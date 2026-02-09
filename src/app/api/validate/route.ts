@@ -18,10 +18,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       valid: true,
       validation,
+      userInput: email,
     });
   } catch (error) {
     return NextResponse.json(
-      { valid: false, error: "Invalid request body" },
+      { valid: false, error: `Invalid request: ${error}` },
       { status: 400 }
     );
   }

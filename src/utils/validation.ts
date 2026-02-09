@@ -4,7 +4,7 @@
  * @returns true if the string is not empty, false otherwise
  */
 export function isNotEmpty(value: string | null | undefined): boolean {
-  return value !== null && value !== undefined && value.trim().length > 0;
+  return value.trim().length > 0;
 }
 
 /**
