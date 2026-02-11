@@ -22,8 +22,8 @@ export async function POST(request: NextRequest) {
     const { email, text } = body;
 
     const validation = {
-      email: email ? isValidEmail(email) : null,
-      text: text ? isNotEmpty(text) : null,
+      email: email !== undefined ? isValidEmail(email) : null,
+      text: text !== undefined ? isNotEmpty(text) : null,
     };
 
     const allValid = Object.values(validation).every(

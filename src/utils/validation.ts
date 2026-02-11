@@ -13,6 +13,9 @@ export function isNotEmpty(value: string | null | undefined): boolean {
  * @returns true if the email format is valid, false otherwise
  */
 export function isValidEmail(email: string): boolean {
+  if (typeof email !== "string") {
+    return false;
+  }
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
