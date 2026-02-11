@@ -26,12 +26,10 @@ export async function POST(request: NextRequest) {
       text: text !== undefined ? isNotEmpty(text) : null,
     };
 
-    const allValid = Object.values(validation).every(
-      (result) => result === null || result === true
-    );
+    const valid = Object.values(validation).every((v) => v === true);
 
     return NextResponse.json({
-      valid: allValid,
+      valid,
       validation,
     });
   } catch (error) {
