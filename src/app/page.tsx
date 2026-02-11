@@ -20,6 +20,11 @@ export default function Home() {
             Health Check
             <span className="link-arrow">→</span>
           </a>
+          <a href="/api/validate" className="link" target="_blank" rel="noopener noreferrer">
+            <span className="link-icon">✓</span>
+            Validate API
+            <span className="link-arrow">→</span>
+          </a>
         </div>
         <div className="status">
           <span className="status-indicator"></span>
